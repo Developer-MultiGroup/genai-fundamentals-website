@@ -37,7 +37,7 @@ const Sponsors = ({ sponsors }: { sponsors: Sponsor[] }) => {
   };
 
   return (
-    <div className="container mx-auto py-32 px-4">
+    <div className="container mx-auto px-4 min-h-screen flex items-center">
       {sortedTiers.map((tier) => (
         <div key={tier} className="mb-16">
           <Heading dark>{formatTierTitle(tier)}</Heading>

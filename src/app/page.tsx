@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Head from "next/head";
-// import CountdownTimer from "@/components/countdown-timer";
 import FAQ from "@/components/faq";
 import Heading from "@/components/heading";
 import SessionContainer from "@/components/session-container";
@@ -12,6 +11,41 @@ import SponsorSlider from "@/components/sponsors-slider";
 import Sponsors from "@/components/sponsors";
 import { useEffect, useState } from "react";
 import WhyJoinSection from "@/components/why-join";
+
+// ------------------------------
+// Type-safe Counter component props
+interface CounterProps {
+  target: number;
+  duration?: number;
+}
+
+const Counter: React.FC<CounterProps> = ({ target, duration = 1500 }) => {
+  const [count, setCount] = useState<number>(0);
+
+  useEffect(() => {
+    let start = 0;
+    const end = target;
+    if (start === end) return;
+
+    const incrementTime = 30; // interval in ms
+    const totalIncrements = Math.ceil(duration / incrementTime);
+    const incrementValue = end / totalIncrements;
+    let currentIncrement = 0;
+
+    const timer = setInterval(() => {
+      currentIncrement++;
+      const newCount = Math.min(Math.floor(currentIncrement * incrementValue), end);
+      setCount(newCount);
+      if (currentIncrement >= totalIncrements) {
+        clearInterval(timer);
+      }
+    }, incrementTime);
+
+    return () => clearInterval(timer);
+  }, [target, duration]);
+
+  return <>{count}+</>;
+};
 
 export default function Home() {
   const latestEventDetails = getLatestEvent();
@@ -42,17 +76,16 @@ export default function Home() {
     return () => window.removeEventListener("resize", updateMinHeight);
   }, []);
 
-  // Animation Variants
-  const fadeInUp = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 },
-  };
-
-  const staggerChildren = {
+  // Animation variants for Gemini icon (similar to WhyJoinSection)
+  const geminiIconVariants = {
+    initial: { scale: 0.8, rotate: 0, opacity: 0 },
     animate: {
+      scale: [0.9, 1.1, 0.9],
+      rotate: [0, 10, 0, -10, 0],
+      opacity: 0.8,
       transition: {
-        staggerChildren: 0.15, // slightly faster than original
+        scale: { duration: 4, repeat: Infinity, ease: "easeInOut" },
+        rotate: { duration: 8, repeat: Infinity, ease: "easeInOut" },
       },
     },
   };
@@ -73,24 +106,33 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          {/* Participant info - hidden on mobile, shown above main text on larger screens */}
-          <div className="hidden sm:block text-left mb-4">
-            <span className="text-2xl">
-              <span className="text-[#3682F1]">500+</span> Katılımcı{" "}
-              <span className="text-[#3682F1]">10+</span> Konuşmacı
+          {/* Participant and Speaker count info for larger screens */}
+          <div className="hidden sm:block text-left mb-4 text-2xl">
+            {/* Only the number is wrapped in a blue span */}
+            <span>
+              <span className="text-[#3682F1]">
+                <Counter target={500} />
+              </span>{" "}
+              Katılımcı{" "}
+            </span>
+            <span>
+              <span className="text-[#3682F1]">
+                <Counter target={10} />
+              </span>{" "}
+              Konuşmacı
             </span>
           </div>
-          
-          {/* Gemini icon positioned behind text */}
+
+          {/* Gemini icon positioned behind text with updated animation */}
           <motion.div
             className="absolute z-0 right-[-5%] sm:right-[-10%]"
             style={{
               top: "10%",
               transform: "translateY(-50%)",
             }}
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 0.8, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
+            variants={geminiIconVariants}
+            initial="initial"
+            animate="animate"
           >
             <img
               src="/images/gemini-icon.svg"
@@ -98,7 +140,7 @@ export default function Home() {
               className="w-24 sm:w-32 md:w-40 rotate-[30deg] object-contain object-center max-w-full h-auto"
             />
           </motion.div>
-          
+
           <div className="relative z-10">
             GenAI Fundamentals
             <br />
@@ -107,15 +149,21 @@ export default function Home() {
               Gemini
             </span>
           </div>
-          {/* Participant info - shown on mobile below main text, hidden on larger screens */}
+          {/* Mobile view counts will be rendered below */}
         </motion.div>
 
-        <div className="block sm:hidden text-center mt-8">
-          <div className="text-2xl">
-            <span className="text-[#3682F1]">500+</span> Katılımcı
+        <div className="block sm:hidden text-center mt-8 text-2xl">
+          <div>
+            <span className="text-[#3682F1]">
+              <Counter target={500} />
+            </span>{" "}
+            Katılımcı
           </div>
-          <div className="text-2xl">
-            <span className="text-[#3682F1]">10+</span> Konuşmacı
+          <div>
+            <span className="text-[#3682F1]">
+              <Counter target={10} />
+            </span>{" "}
+            Konuşmacı
           </div>
         </div>
 
