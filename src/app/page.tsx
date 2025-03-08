@@ -205,6 +205,7 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
+          className="min-h-screen lg:flex lg:flex-col lg:items-center"
         >
           <span id="yayınlar" />
           <Heading dark>Bootcamp Eğitim Takvimi</Heading>

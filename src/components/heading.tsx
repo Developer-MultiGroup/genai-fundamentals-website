@@ -33,7 +33,7 @@ const Heading: React.FC<HeadingProps> = ({ children, className, dark }) => {
   return (
     <p
       className={clsx(
-        "font-extrabold text-4xl md:text-6xl text-center pb-16 pt-16 md:pt-0 max-w-5xl mx-auto",
+        "font-extrabold text-4xl md:text-6xl text-center pb-16 pt-20 md:pt-24 xl:pt-0 max-w-5xl mx-auto",
         className,
         dark ? "text-gray-900" : "text-white",
       )}
@@ -44,4 +44,3 @@ const Heading: React.FC<HeadingProps> = ({ children, className, dark }) => {
 }
 
 export default Heading
-
