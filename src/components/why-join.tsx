@@ -63,7 +63,7 @@ export default function WhyJoinSection() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12"
+          className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12"
         >
           {reasons.map((reason, index) => (
             <motion.div key={index} variants={item} className="flex flex-col items-center text-center">
