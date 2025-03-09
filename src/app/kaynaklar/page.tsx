@@ -127,7 +127,7 @@ export default function ResourcePage() {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Fixed top spacing */}
-      <div className="h-[30vh]"></div>
+      <div className="h-[20vh]"></div>
 
       {/* Content container */}
       <motion.div
