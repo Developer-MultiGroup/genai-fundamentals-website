@@ -76,7 +76,7 @@ const events: Event[] = [
       {
         topic: "Kick-Off",
         date: "2025-03-03",
-        startTime: "20:00",
+        startTime: "20:30",
         endTime: "22:00",
         speakerName: "Serkan Alc",
         url: "https://www.youtube.com/watch?v=B-tTRvuMvH8&list=PLQvJkakaBRKcEf3tq169jkNvoyiQN2XzN&index=6&pp=iAQB"
@@ -84,7 +84,7 @@ const events: Event[] = [
       {
         topic: "What Are the Basic GenAI Consepts?",
         date: "2025-03-05",
-        startTime: "20:00",
+        startTime: "20:30",
         endTime: "22:00",
         speakerName: "Kardel Rüveyda Çetin",
         url: "https://www.youtube.com/watch?v=B-tTRvuMvH8&list=PLQvJkakaBRKcEf3tq169jkNvoyiQN2XzN&index=6&pp=iAQB"
@@ -92,7 +92,7 @@ const events: Event[] = [
       {
         topic: "Basic LLM Invoke From Gemini API",
         date: "2025-03-08",
-        startTime: "20:00",
+        startTime: "20:30",
         endTime: "22:00",
         speakerName: "Kardel Rüveyda Çetin",
         url: "https://www.youtube.com/watch?v=oWlaMUcOWYM&list=PLQvJkakaBRKcEf3tq169jkNvoyiQN2XzN&index=5&pp=iAQB"
@@ -100,7 +100,7 @@ const events: Event[] = [
       {
         topic: "Fantastic Prompts and Where To Find Them?",
         date: "2025-03-12",
-        startTime: "20:00",
+        startTime: "20:30",
         endTime: "22:00",
         speakerName: "Göker Güner",
         url: "https://www.youtube.com/watch?v=jZbjJo8YxQg&list=PLQvJkakaBRKcEf3tq169jkNvoyiQN2XzN&index=4&pp=iAQB"
@@ -108,7 +108,7 @@ const events: Event[] = [
       {
         topic: "Prompt Engineering Methods",
         date: "2025-03-15",
-        startTime: "20:00",
+        startTime: "20:30",
         endTime: "22:00",
         speakerName: "Daron Yöndem",
         url: "https://www.youtube.com/watch?v=-lLNMt_JU_4&list=PLQvJkakaBRKcEf3tq169jkNvoyiQN2XzN&index=3&pp=iAQB"
@@ -116,28 +116,28 @@ const events: Event[] = [
       {
         topic: "Prompt Engineering Fundamentals",
         date: "2025-03-16",
-        startTime: "20:00",
+        startTime: "20:30",
         endTime: "22:00",
         speakerName: "Fatih Kadir Akın",
       },
       {
         topic: "Gemini API details",
         date: "2025-03-19",
-        startTime: "20:00",
+        startTime: "20:30",
         endTime: "22:00",
         speakerName: "Tolga Kurtuluş",
       },
       {
         topic: "Basic Chatbot Deployment & Final Project Details",
         date: "2025-03-21",
-        startTime: "20:00",
+        startTime: "20:30",
         endTime: "22:00",
         speakerName: "Enes Fehmi Manan",
       },
       {
         topic: "LLM Parameters",
         date: "2025-03-22",
-        startTime: "20:00",
+        startTime: "20:30",
         endTime: "22:00",
         speakerName: "Tolga Kurtuluş",
         url: "https://www.youtube.com/watch?v=yRraDgrZees&list=PLQvJkakaBRKcEf3tq169jkNvoyiQN2XzN&index=2&pp=iAQB"
@@ -145,49 +145,49 @@ const events: Event[] = [
       {
         topic: "What is RAG & Fine Tuning",
         date: "2025-03-26",
-        startTime: "20:00",
+        startTime: "20:30",
         endTime: "22:00",
         speakerName: "Bilge Yücel",
       },
       {
         topic: "Optimization Areas for RAG Applications",
         date: "2025-03-28",
-        startTime: "20:00",
+        startTime: "20:30",
         endTime: "22:00",
         speakerName: "Emrah Mete",
       },
       {
         topic: "Sample RAG notebook",
         date: "2025-03-29",
-        startTime: "20:00",
+        startTime: "20:30",
         endTime: "22:00",
         speakerName: "Bilge Yücel",
       },
       {
         topic: "What is an agent? LLM agent examples",
         date: "2025-04-02",
-        startTime: "20:00",
+        startTime: "20:30",
         endTime: "22:00",
         speakerName: "Şeyma Sarıgil",
       },
       {
         topic: "Comparing Agent Frameworks & Different agent notebook example",
         date: "2025-04-05",
-        startTime: "20:00",
+        startTime: "20:30",
         endTime: "22:00",
         speakerName: "Şeyma Sarıgil",
       },
       {
         topic: "What is Fine Tuning",
         date: "2025-04-09",
-        startTime: "20:00",
+        startTime: "20:30",
         endTime: "22:00",
         speakerName: "Selin Çıldam",
       },
       {
         topic: "Fine Tuning with Google AI Studio",
         date: "2025-04-12",
-        startTime: "20:00",
+        startTime: "20:30",
         endTime: "22:00",
         speakerName: "Selin Çıldam",
       },
