@@ -143,7 +143,7 @@ const events: Event[] = [
         url: "https://www.youtube.com/watch?v=yRraDgrZees&list=PLQvJkakaBRKcEf3tq169jkNvoyiQN2XzN&index=2&pp=iAQB"
       },
       {
-        topic: "What is RAG & Fine Tuning",
+        topic: "Advanced RAG",
         date: "2025-03-26",
         startTime: "20:30",
         endTime: "22:00",
@@ -157,7 +157,7 @@ const events: Event[] = [
         speakerName: "Emrah Mete",
       },
       {
-        topic: "Sample RAG notebook",
+        topic: "Advanced RAG Notebook",
         date: "2025-03-29",
         startTime: "20:30",
         endTime: "22:00",
