@@ -44,6 +44,18 @@ export default function WhyJoinSection() {
       title: "Sertifika Kazanma Şansı",
       description: "Başarıyla tamamlayanlara kariyerine değer katacak sertifika!",
     },
+    {
+      title: "100+ Kaynak",
+      description: "Modern eğitim materyalleriyle dolu arşivimizle, bilgi dünyasına kapınızı aralayın.",
+    },
+    {
+      title: "500+ Katılımcı",
+      description: "Farklı sektörlerden gelen görüş ve deneyimlerin bir araya geldiği bir platforma katılın.",
+    },
+    {
+      title: "40+ Saat Eğitim",
+      description: "Yoğun ve etkileşimli seanslarımızla, pratik bilgi ve tecrübelerinizi katlayın.",
+    }    
   ]
 
   return (
