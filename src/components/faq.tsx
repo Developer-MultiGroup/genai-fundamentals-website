@@ -10,10 +10,17 @@ export default function FAQ() {
     <Accordion
       type="single"
       collapsible
-      className="w-5/6 lg:w-2/3 xl:w-5/12 m-auto pb-8 text-white"
+      className="w-5/6 md:w-full m-auto pb-8 text-white"
     >
       <AccordionItem value="item-1" className="border-zinc-400/30">
-        <AccordionTrigger className="font-bold">Biz Kimiz?</AccordionTrigger>
+        <AccordionTrigger
+          className="font-bold 
+      data-[state=open]:bg-gradient-to-r data-[state=open]:from-[#3682F1] data-[state=open]:to-[#C55E85]
+      data-[state=open]:bg-clip-text data-[state=open]:text-transparent
+      transition-colors duration-300 hover:no-underline"
+        >
+          Biz Kimiz?
+        </AccordionTrigger>
         <AccordionContent>
           MultiGroup, 2020 yılında teknolojiye olan tutku ve merakını
           birleştiren yazılım geliştiricilerinin bir araya geldiği, büyümeyi, iş
@@ -34,8 +41,14 @@ export default function FAQ() {
           yolculuklarında yeni kapılar açmayı amaçlıyoruz.
         </AccordionContent>
       </AccordionItem>
+
       <AccordionItem value="item-2" className="border-zinc-400/30">
-        <AccordionTrigger className="font-bold">
+        <AccordionTrigger
+          className="font-bold 
+      data-[state=open]:bg-gradient-to-r data-[state=open]:from-[#3682F1] data-[state=open]:to-[#C55E85]
+      data-[state=open]:bg-clip-text data-[state=open]:text-transparent
+      transition-colors duration-300 hover:no-underline"
+        >
           Ekibe üye olmak için ne yapmalıyım?
         </AccordionTrigger>
         <AccordionContent>
@@ -63,7 +76,12 @@ export default function FAQ() {
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-3" className="border-zinc-400/30">
-        <AccordionTrigger className="font-bold">
+        <AccordionTrigger
+          className="font-bold 
+      data-[state=open]:bg-gradient-to-r data-[state=open]:from-[#3682F1] data-[state=open]:to-[#C55E85]
+      data-[state=open]:bg-clip-text data-[state=open]:text-transparent
+      transition-colors duration-300 hover:no-underline"
+        >
           Etkinliklerde konuşmacı olmak için ne yapmalıyım?
         </AccordionTrigger>
         <AccordionContent>
@@ -71,11 +89,21 @@ export default function FAQ() {
           için sabırsızlanan bir yazılım topluluğudur. Etkinliklerimizde
           konuşmacı olmak için uzmanlık alanınızda ilgi çekici bir konu
           belirlemek ve bizim ile iletişime geçmek yeterli. Başvuru için{" "}
-          <a href="mailto:developermultigroup@gmail.com" className="text-[#C55E85]">developermultigroup@gmail.com</a>
+          <a
+            href="mailto:developermultigroup@gmail.com"
+            className="text-[#C55E85]"
+          >
+            developermultigroup@gmail.com
+          </a>
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-4" className="border-zinc-400/30">
-        <AccordionTrigger className="font-bold">
+        <AccordionTrigger
+          className="font-bold 
+      data-[state=open]:bg-gradient-to-r data-[state=open]:from-[#3682F1] data-[state=open]:to-[#C55E85]
+      data-[state=open]:bg-clip-text data-[state=open]:text-transparent
+      transition-colors duration-300 hover:no-underline"
+        >
           Partnerlik için ne yapmalıyım?
         </AccordionTrigger>
         <AccordionContent>
@@ -84,7 +112,13 @@ export default function FAQ() {
           edebileceğimiz her etkinlik, konferans ve projede işbirliğine önem
           veriyor, hayata geçirmek istediğiniz yeni fikirlerin bir parçası
           olmayı değerli bir fırsat olarak görüyoruz. Fikir ve önerileriniz için
-          bizimle <a href="mailto:developermultigroup@gmail.com" className="text-[#C55E85]">developermultigroup@gmail.com</a>{" "}
+          bizimle{" "}
+          <a
+            href="mailto:developermultigroup@gmail.com"
+            className="text-[#C55E85]"
+          >
+            developermultigroup@gmail.com
+          </a>{" "}
           mail adresi aracılığıyla iletişime geçebilirsiniz.
         </AccordionContent>
       </AccordionItem>

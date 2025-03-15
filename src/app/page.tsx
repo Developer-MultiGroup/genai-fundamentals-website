@@ -34,7 +34,10 @@ const Counter: React.FC<CounterProps> = ({ target, duration = 1500 }) => {
 
     const timer = setInterval(() => {
       currentIncrement++;
-      const newCount = Math.min(Math.floor(currentIncrement * incrementValue), end);
+      const newCount = Math.min(
+        Math.floor(currentIncrement * incrementValue),
+        end
+      );
       setCount(newCount);
       if (currentIncrement >= totalIncrements) {
         clearInterval(timer);
@@ -223,11 +226,14 @@ export default function Home() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
+        className="max-w-6xl mx-auto px-4 pt-32 pb-16"
       >
-        <p className="font-extrabold text-4xl text-center pb-16 pt-16 max-w-2xl mx-auto text-white">
-          Sıkça Sorulan Sorular
-        </p>
-        <FAQ />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <p className="font-extrabold text-4xl text-center text-white">
+            Sıkça Sorulan Sorular
+          </p>
+          <FAQ />
+        </div>
       </motion.div>
     </>
   );
