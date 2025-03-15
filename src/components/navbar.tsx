@@ -78,11 +78,11 @@ const Navbar = () => {
               variant="outline"
               className="relative h-11 px-6 text-zinc-900 group transition-all duration-300 ease-in-out"
             >
-              <a href="https://www.youtube.com/playlist?list=PLQvJkakaBRKcEf3tq169jkNvoyiQN2XzN" target="_blank">
-                <div className="absolute inset-0 bg-blue-500 transition-transform duration-300 ease-in-out rounded-md" />
+              <a href="https://kommunity.com/devmultigroup/events/generativeai-fundamentals-with-gemini-64a8a503" target="_blank">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-pink-500 transition-transform duration-300 ease-in-out rounded-md" />
                 <div className="absolute inset-0 bg-white group-hover:translate-x-2 group-hover:-translate-y-2 transition-all duration-300 ease-in-out rounded-md flex items-center justify-center">
-                  <span className="relative z-10 font-medium text-sm">
-                    Yayınlar
+                  <span className="relative z-10 font-medium text-lg">
+                    Başvur
                   </span>
                 </div>
               </a>
@@ -133,8 +133,8 @@ const Navbar = () => {
               variant="outline"
               className="mt-6 rounded-lg text-lg text-black border-white px-8 py-3"
             >
-              <a href="https://www.youtube.com/playlist?list=PLQvJkakaBRKcEf3tq169jkNvoyiQN2XzN" target="_blank">
-                Yayınlar
+              <a href="https://kommunity.com/devmultigroup/events/generativeai-fundamentals-with-gemini-64a8a503" target="_blank">
+                Başvur
               </a>
             </Button>
           </div>
