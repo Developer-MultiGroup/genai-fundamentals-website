@@ -150,6 +150,7 @@ export default function SessionContainer({ event }: SessionContainerProps) {
                   Seçilen Oturumlar ({selectedSessions.length})
                 </h3>
                 <Button
+                  data-umami-event="Generate Custom Calendar"
                   onClick={() => handleCalendarDownload(selectedSessions)}
                   className="bg-blue-500 hover:bg-blue-600 active:bg-blue-800 shadow-md"
                 >
@@ -317,6 +318,7 @@ export default function SessionContainer({ event }: SessionContainerProps) {
         <div className="flex flex-col md:flex-row justify-center pt-8 gap-y-2 md:gap-x-4">
           <div className="bg-gradient-to-r from-[#3682F1] to-[#C55E85] p-[2px] rounded-2xl w-full md:w-1/3">
             <Button
+              data-umami-event="Generate Full Calendar"
               onClick={() => handleCalendarDownload(event.sessions)}
               className="w-full bg-gray-700 hover:bg-gray-800 active:bg-gray-900 font-bold shadow-lg hover:shadow-xl transition-all flex items-center justify-center p-6 rounded-2xl"
             >
@@ -326,6 +328,7 @@ export default function SessionContainer({ event }: SessionContainerProps) {
           </div>
           <div className="bg-gradient-to-r from-[#3682F1] to-[#C55E85] p-[2px] rounded-2xl w-full md:w-1/3">
             <Button
+              data-umami-event="Youtube Playlist"
               onClick={() => handleRoute()}
               className="w-full bg-gray-700 hover:bg-gray-800 active:bg-gray-900 font-bold shadow-lg hover:shadow-xl transition-all flex items-center justify-center p-6 rounded-2xl"
             >

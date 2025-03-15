@@ -65,6 +65,7 @@ export default function Footer() {
             aria-label="DMG Instagram Hesabı"
             href="https://instagram.com/devmultigroup"
             target="_blank"
+            data-umami-event="Instagram"
           >
             <InstagramLogo className="text-xl text-pink-500 hover:text-pink-400" />
           </Link>
@@ -72,6 +73,7 @@ export default function Footer() {
             aria-label="DMG X Hesabı"
             href="https://x.com/devmultigroup"
             target="_blank"
+            data-umami-event="X (Twitter)"
           >
             <XLogo className="text-xl text-white hover:text-gray-300" />
           </Link>
@@ -79,6 +81,7 @@ export default function Footer() {
             aria-label="DMG Youtube Hesabı"
             href="https://www.youtube.com/@devmultigroup"
             target="_blank"
+            data-umami-event="Youtube"
           >
             <YoutubeLogo className="text-xl text-red-600 hover:text-red-500" />
           </Link>
@@ -86,6 +89,7 @@ export default function Footer() {
             aria-label="DMG Linkedin Hesabı"
             href="https://www.linkedin.com/company/devmultigroup/posts/?feedView=all"
             target="_blank"
+            data-umami-event="LinkedIn"
           >
             <LinkedinLogo className="text-xl text-blue-600 hover:text-blue-500" />
           </Link>
@@ -93,6 +97,7 @@ export default function Footer() {
             aria-label="DMG Github Hesabı"
             href="https://github.com/Developer-MultiGroup"
             target="_blank"
+            data-umami-event="Github"
           >
             <GithubLogo className="text-xl text-white hover:text-gray-300" />
           </Link>

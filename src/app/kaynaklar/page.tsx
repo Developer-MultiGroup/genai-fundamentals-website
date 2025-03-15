@@ -209,6 +209,7 @@ export default function ResourcePage() {
           >
             <motion.a
               href="https://github.com/Developer-MultiGroup/DMG-Data-Science-Awesome"
+              data-umami-event="Add Resource Github"
               target="_blank"
               rel="noopener noreferrer"
               variants={buttonVariants}
@@ -318,6 +319,7 @@ export default function ResourcePage() {
                             <Button
                               className="bg-gray-700/90 hover:bg-gray-600/90 text-white font-medium shadow-md hover:shadow-lg transition-all duration-200 border border-gray-500/30"
                               aria-label="kaynak linki"
+                              data-umami-event={resource.name}
                             >
                               İncele
                             </Button>

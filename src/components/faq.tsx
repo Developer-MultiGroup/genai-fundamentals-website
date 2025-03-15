@@ -69,6 +69,7 @@ export default function FAQ() {
             href="https://forms.gle/i2wGonLF3kBCRucv6"
             target="blank"
             className="underline text-[#C55E85]"
+            data-umami-event="Team Application"
           >
             bu linki
           </a>{" "}
@@ -92,6 +93,7 @@ export default function FAQ() {
           <a
             href="mailto:developermultigroup@gmail.com"
             className="text-[#C55E85]"
+            data-umami-event="DMG Mail"
           >
             developermultigroup@gmail.com
           </a>
@@ -116,6 +118,7 @@ export default function FAQ() {
           <a
             href="mailto:developermultigroup@gmail.com"
             className="text-[#C55E85]"
+            data-umami-event="DMG Mail"
           >
             developermultigroup@gmail.com
           </a>{" "}

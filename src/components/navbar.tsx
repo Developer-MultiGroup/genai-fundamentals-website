@@ -81,7 +81,7 @@ const Navbar = () => {
               <a href="https://kommunity.com/devmultigroup/events/generativeai-fundamentals-with-gemini-64a8a503" target="_blank">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-pink-500 transition-transform duration-300 ease-in-out rounded-md" />
                 <div className="absolute inset-0 bg-white group-hover:translate-x-2 group-hover:-translate-y-2 transition-all duration-300 ease-in-out rounded-md flex items-center justify-center">
-                  <span className="relative z-10 font-medium text-lg bg-gradient-to-r from-[#3682F1] to-[#C55E85] bg-clip-text text-transparent">
+                  <span data-umami-event="Kommunity Başvuru" className="relative z-10 font-medium text-lg bg-gradient-to-r from-[#3682F1] to-[#C55E85] bg-clip-text text-transparent">
                     Başvur
                   </span>
                 </div>
