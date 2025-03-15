@@ -28,32 +28,34 @@ export default function Footer() {
     <footer className="relative bg-transparent text-white py-6 px-2 md:px-12 flex flex-col items-center justify-center min-h-60">
       <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-5xl">
         <div className="flex items-center gap-3">
-          <Image
-            src="/multigroup.webp"
-            alt="MultiGroup Logo"
-            width={200}
-            height={200}
-          />
+          <Link href="/" aria-label="Anasayfa">
+            <Image
+              src="/multigroup.webp"
+              alt="MultiGroup Logo"
+              width={200}
+              height={200}
+            />
+          </Link>
         </div>
         <nav className="mt-4 lg:mt-0 flex flex-col md:flex-row gap-6 text-sm items-center justify-center w-full text-center align-middle">
           <Link
             aria-label="Kaynaklar sayfası"
             href="/kaynaklar"
-            className="hover:text-gray-400"
+            className="hover:text-[#3682F1] transition-colors ease-in-out duration-300"
           >
             Kaynaklar
           </Link>
           <Link
             aria-label="Konuşmacılar sayfası"
             href="/#konuşmacılar"
-            className="hover:text-gray-400"
+            className="hover:text-[#3682F1] transition-colors ease-in-out duration-300"
           >
             Konuşmacılar
           </Link>
           <Link
             aria-label="yayınlar"
             href="/#yayınlar"
-            className="hover:text-gray-400"
+            className="hover:text-[#3682F1] transition-colors ease-in-out duration-300"
           >
             Yayınlar
           </Link>

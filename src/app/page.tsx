@@ -196,7 +196,7 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="min-h-screen lg:flex lg:flex-col lg:items-center"
+          className="min-h-screen lg:flex lg:flex-col lg:items-center lg:align-middle lg:justify-center"
         >
           <Heading dark>Konuşmacılarımız Kimler?</Heading>
           <Speakers speakers={latestEventDetails.speakers} />
@@ -208,7 +208,7 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="min-h-screen lg:flex lg:flex-col lg:items-center"
+          className="min-h-screen lg:flex lg:flex-col lg:items-center lg:pt-32"
         >
           <span id="yayınlar" />
           <Heading dark>Bootcamp Eğitim Takvimi</Heading>
