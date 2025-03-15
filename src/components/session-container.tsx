@@ -18,6 +18,7 @@ import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import { formatIsoDate } from "@/lib/event-utils";
 import { motion, AnimatePresence } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 interface SessionContainerProps {
   event: Event;
@@ -25,21 +26,49 @@ interface SessionContainerProps {
 
 export default function SessionContainer({ event }: SessionContainerProps) {
   const { toast } = useToast();
-
+  const router = useRouter();
   const [selectedSessions, setSelectedSessions] = useState<Session[]>([]);
 
   const handleCalendarDownload = async (sessions: Session[]) => {
     if (sessions.length === 0) return;
 
+    // Get current date at the start of the day (midnight)
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    // Filter out sessions that occurred before today
+    const upcomingSessions = sessions.filter((session) => {
+      // Parse date and time fields to create a proper date object
+      const [year, month, day] = session.date.split("-").map(Number);
+      const [hours, minutes] = session.startTime.split(":").map(Number);
+
+      // JavaScript months are 0-indexed (0-11), so subtract 1 from month
+      const sessionDate = new Date(year, month - 1, day, hours, minutes);
+
+      return sessionDate >= today;
+    });
+
+    // Check if there are any upcoming sessions left
+    if (upcomingSessions.length === 0) {
+      toast({
+        title: "Bilgi",
+        description: "Gelecek etkinlik bulunamadı.",
+        className: "bg-yellow-500 text-white",
+        duration: 3000,
+      });
+      return;
+    }
+
     const eventData = {
       ...event,
-      sessions: sessions,
+      sessions: upcomingSessions,
     };
+
     await generateCalendarFile(eventData);
 
     toast({
       title: "Takvim dosyası indirildi",
-      description: "Etkinlik takviminize eklendi.",
+      description: `${upcomingSessions.length} etkinlik takviminize eklendi.`,
       className: "bg-green-500 text-white",
       duration: 3000,
     });
@@ -91,6 +120,12 @@ export default function SessionContainer({ event }: SessionContainerProps) {
       transition: { type: "spring", stiffness: 200, damping: 15 },
     },
     exit: { opacity: 0, scale: 0.8, transition: { duration: 0.2 } },
+  };
+
+  const handleRoute = () => {
+    router.push(
+      "https://www.youtube.com/playlist?list=PLQvJkakaBRKcEf3tq169jkNvoyiQN2XzN"
+    );
   };
 
   return (
@@ -291,7 +326,7 @@ export default function SessionContainer({ event }: SessionContainerProps) {
           </div>
           <div className="bg-gradient-to-r from-[#3682F1] to-[#C55E85] p-[2px] rounded-2xl w-full md:w-1/3">
             <Button
-              onClick={() => handleCalendarDownload(event.sessions)}
+              onClick={() => handleRoute()}
               className="w-full bg-gray-700 hover:bg-gray-800 active:bg-gray-900 font-bold shadow-lg hover:shadow-xl transition-all flex items-center justify-center p-6 rounded-2xl"
             >
               <Queue className="mr-2" />
