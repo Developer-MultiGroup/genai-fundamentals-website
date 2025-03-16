@@ -11,6 +11,7 @@ import SponsorSlider from "@/components/sponsors-slider";
 import Sponsors from "@/components/sponsors";
 import { useEffect, useState } from "react";
 import WhyJoinSection from "@/components/why-join";
+import StayInTouch from "@/components/stay-in-touch";
 
 // ------------------------------
 // Type-safe Counter component props
@@ -214,11 +215,14 @@ export default function Home() {
           <Heading dark>Bootcamp Eğitim Takvimi</Heading>
           <SessionContainer event={latestEventDetails} />
         </motion.div>
-
+        
+        <StayInTouch />
+        
         <Sponsors sponsors={latestEventDetails.sponsors} />
       </div>
 
       <SponsorSlider reverse sponsors={latestEventDetails.sponsors} />
+
 
       <motion.div
         id="faq"
@@ -226,7 +230,7 @@ export default function Home() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="max-w-6xl mx-auto px-4 pt-32 pb-16"
+        className="max-w-6xl mx-auto px-4 pt-12 pb-16"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <p className="font-extrabold text-4xl text-center text-white">
