@@ -2,6 +2,9 @@
 import { google } from 'googleapis';
 import { NextResponse } from 'next/server';
 
+// Revalidate değeri - 60 saniye
+export const revalidate = 60;
+
 async function getGoogleSheetsClient() {
   const credentials = {
     client_email: process.env.GOOGLE_CLIENT_EMAIL,
@@ -39,10 +42,22 @@ export async function GET() {
       }))
       .filter((resource) => resource.name && resource.link && resource.description);
 
-    // Return a JSON response and set caching headers.
-    return NextResponse.json(resources, {
+    // Zaman damgası ekleyelim
+    const timestamp = new Date().toLocaleTimeString('tr-TR');
+    
+    console.log(`Kaynaklar yenilendi: ${timestamp}`);
+
+    // Return a JSON response and set caching headers for both CDN and client.
+    return NextResponse.json({
+      resources, 
+      _metadata: {
+        lastUpdated: timestamp,
+        revalidationPeriod: '60 saniye'
+      }
+    }, {
       headers: {
-        'Cache-Control': 's-maxage=3600, stale-while-revalidate',
+        // 60 saniye boyunca önbellekte tutulacak ve arka planda yenilenecek
+        'Cache-Control': 's-maxage=60, stale-while-revalidate=59',
       },
     });
   } catch (error: any) {
