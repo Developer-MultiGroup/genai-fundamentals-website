@@ -50,7 +50,7 @@ export default function ContactTabs() {
           </p>
           <div className="bg-gradient-to-r from-[#3682F1] to-[#C55E85] p-[2px] rounded-2xl max-w-xs mx-auto lg:ml-0">
             <Link
-              href="https://furkanunsalan.dev"
+              href="https://chat.whatsapp.com/G1qSkvfs0rn3ZJPYoFCqiW"
               data-umami-event="Generate Full Calendar"
               className="w-full bg-gray-700 hover:bg-gray-800 active:bg-gray-900 font-bold shadow-lg hover:shadow-xl transition-all flex items-center justify-center p-4 rounded-2xl"
             >
