@@ -119,6 +119,7 @@ const events: Event[] = [
         startTime: "20:30",
         endTime: "22:00",
         speakerName: "Fatih Kadir Akın",
+        url: "https://www.youtube.com/watch?v=OSSe1fzhXnw&list=PLQvJkakaBRKcEf3tq169jkNvoyiQN2XzN&index=6&pp=iAQB"
       },
       {
         topic: "Gemini API details",
@@ -126,6 +127,7 @@ const events: Event[] = [
         startTime: "20:30",
         endTime: "22:00",
         speakerName: "Tolga Kurtuluş",
+        url: "https://www.youtube.com/watch?v=A88XskCu-Vc&list=PLQvJkakaBRKcEf3tq169jkNvoyiQN2XzN&index=7&pp=iAQB"
       },
       {
         topic: "Basic Chatbot Deployment & Final Project Details",
@@ -133,6 +135,7 @@ const events: Event[] = [
         startTime: "20:30",
         endTime: "22:00",
         speakerName: "Enes Fehmi Manan",
+        url: "https://www.youtube.com/watch?v=3if2pvH8JzA&list=PLQvJkakaBRKcEf3tq169jkNvoyiQN2XzN&index=8&pp=iAQB"
       },
       {
         topic: "LLM Parameters",
@@ -148,6 +151,7 @@ const events: Event[] = [
         startTime: "20:30",
         endTime: "22:00",
         speakerName: "Bilge Yücel",
+        url: "https://www.youtube.com/watch?v=RagWOl2fg6Y&list=PLQvJkakaBRKcEf3tq169jkNvoyiQN2XzN&index=10&pp=iAQB"
       },
       {
         topic: "Optimization Areas for RAG Applications",
@@ -155,6 +159,7 @@ const events: Event[] = [
         startTime: "20:30",
         endTime: "22:00",
         speakerName: "Emrah Mete",
+        url: "https://www.youtube.com/watch?v=EzL2ANUeLzg&list=PLQvJkakaBRKcEf3tq169jkNvoyiQN2XzN&index=11&pp=iAQB"
       },
       {
         topic: "Advanced RAG Notebook",
@@ -162,6 +167,7 @@ const events: Event[] = [
         startTime: "20:30",
         endTime: "22:00",
         speakerName: "Bilge Yücel",
+        url: "https://www.youtube.com/watch?v=fXkeYK-hL6c&list=PLQvJkakaBRKcEf3tq169jkNvoyiQN2XzN&index=12&pp=iAQB"
       },
       {
         topic: "What is an agent? LLM agent examples",
