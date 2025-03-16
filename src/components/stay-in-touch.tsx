@@ -7,6 +7,8 @@ import { motion } from "framer-motion"
 import { PhoneIcon, Mail, MessageCircle } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import Heading from "./heading"
+import { Button } from "./ui/button"
 
 interface TabProps {
   title: string
@@ -40,35 +42,33 @@ export default function ContactTabs() {
     {
       title: "WhatsApp ile iletişim",
       icon: <PhoneIcon className="w-8 h-8 text-[#3682F1]" />,
-      image: "/images/IMG_5407.jpeg",
+      image: "/images/dmg-connect.webp",
       content: (
         <div className="space-y-4">
           <p className="text-gray-600">
           Sorularınız için WhatsApp topluluğumuz üzerinden bizimle iletişime geçebilir, sektörünüzle ilgili çeşitli gruplarda yeni insanlarla tanışarak merak ettiklerinizi sorabilir ve paylaşımlarda bulunabilirsiniz. Ekibimiz, ilettiğiniz her soruya en kısa sürede dönüş sağlayarak size yardımcı olmak için hazır beklemektedir.
           </p>
-          <Link
-            href="https://wa.me/your-phone-number" // Replace with your WhatsApp number
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-[#3682F1] to-[#C55E85] text-white font-semibold hover:opacity-90 transition-opacity"
-          >
-            <MessageCircle className="w-5 h-5" />
-            WhatsApp ile İletişime Geç
-          </Link>
+          <div className="bg-gradient-to-r from-[#3682F1] to-[#C55E85] p-[2px] rounded-2xl max-w-xs mx-auto lg:ml-0">
+            <Link
+              href="https://furkanunsalan.dev"
+              data-umami-event="Generate Full Calendar"
+              className="w-full bg-gray-700 hover:bg-gray-800 active:bg-gray-900 font-bold shadow-lg hover:shadow-xl transition-all flex items-center justify-center p-4 rounded-2xl"
+            >
+              <MessageCircle className="mr-2" />
+              Topluluğa Katıl
+            </Link>
+          </div>
         </div>
       ),
     }
   ]
 
   return (
-    <div className="w-full min-h-screen flex items-center">
+    <div className="w-full min-h-screen flex items-center justify-center align-middle lg:pt-32">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col items-center">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-8 text-black text-center">
-              İletişimde{" "}
-              <span className="bg-gradient-to-r from-[#3682F1] to-[#C55E85] bg-clip-text text-transparent">Kalın</span>
-            </h2>
+            <Heading dark >İletişimde Kalın</Heading>
 
             {/* Tabs - Centered */}
             {/* <div className="mb-12 overflow-x-auto w-full">
@@ -85,14 +85,14 @@ export default function ContactTabs() {
             </div> */}
 
             {/* Tab Content - Two Column Layout */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center w-full">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center w-full">
               {/* Left Column - Content */}
               <motion.div
                 key={activeTab}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.3 }}
-                className="text-white"
+                className="text-white text-center lg:text-left"
               >
                 <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-[#3682F1] to-[#C55E85] bg-clip-text text-transparent">
                   {tabs[activeTab].title}

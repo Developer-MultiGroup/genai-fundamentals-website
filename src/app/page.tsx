@@ -215,14 +215,13 @@ export default function Home() {
           <Heading dark>Bootcamp Eğitim Takvimi</Heading>
           <SessionContainer event={latestEventDetails} />
         </motion.div>
-        
+
         <StayInTouch />
-        
+
         <Sponsors sponsors={latestEventDetails.sponsors} />
       </div>
 
       <SponsorSlider reverse sponsors={latestEventDetails.sponsors} />
-
 
       <motion.div
         id="faq"
@@ -234,7 +233,10 @@ export default function Home() {
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <p className="font-extrabold text-4xl text-center text-white">
-            Sıkça Sorulan Sorular
+            Sıkça Sorulan{" "}
+            <span className="bg-gradient-to-r from-[#3682F1] to-[#C55E85] bg-clip-text text-transparent">
+              Sorular
+            </span>
           </p>
           <FAQ />
         </div>
