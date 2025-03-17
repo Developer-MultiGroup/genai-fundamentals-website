@@ -5,10 +5,23 @@ const events: Event[] = [
     speakers: [
       {
         fullName: "Daron Yöndem",
-        title: "Tech Lead for Application Innovation, Microsoft",
+        title: "Tech Lead for Application Innovation",
         company: "Microsoft",
         linkedin: "https://www.linkedin.com/in/daronyondem/",
         twitter: "https://x.com/daronyondem",
+      },
+      {
+        fullName: "Mete Atamel",
+        title: "Software Engineer | Developer Advocate",
+        company: "Google",
+        linkedin: "https://www.linkedin.com/in/meteatamel/",
+        twitter: "https://x.com/meteatamel",
+      },
+      {
+        fullName: "Erhan Meydan",
+        title: "AI Researcher, Video Content Creator",
+        linkedin: "https://www.linkedin.com/in/erhanmeydan/",
+        twitter: "https://x.com/erhanmeydan",
       },
       {
         fullName: "Kardel Rüveyda Çetin ",
@@ -179,11 +192,25 @@ const events: Event[] = [
         speakerName: "Şeyma Sarıgil",
       },
       {
+        topic: "AI Agents Unmasked: Agents Nedir Kimdir?",
+        date: "2025-04-04",
+        startTime: "20:30",
+        endTime: "22:00",
+        speakerName: "Erhan Meydan",
+      },
+      {
         topic: "Comparing Agent Frameworks & Different agent notebook example",
         date: "2025-04-05",
         startTime: "20:30",
         endTime: "22:00",
         speakerName: "Şeyma Sarıgil",
+      },
+      {
+        topic: "Beyond the Prompt: Evaluating, Testing, and Securing LLM Applications",
+        date: "2025-04-07",
+        startTime: "20:30",
+        endTime: "22:00",
+        speakerName: "Mete Atamel",
       },
       {
         topic: "What is Fine Tuning",
@@ -201,6 +228,10 @@ const events: Event[] = [
       },
     ],
     sponsors: [
+      {
+        tier: "",
+        sponsorSlug: "google",
+      },
       {
         tier: "",
         sponsorSlug: "microsoft",

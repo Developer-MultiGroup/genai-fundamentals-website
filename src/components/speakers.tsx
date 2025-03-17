@@ -24,7 +24,7 @@ const Speakers: React.FC<SpeakerCarouselProps> = ({ speakers }) => {
 
   return (
     <section className="max-w-6xl sm:w-5/6 mx-auto md:px-0 px-4">
-      <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+      <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4">
         {speakers.map((speaker) => (
           <div
             key={speaker.fullName}
