@@ -131,7 +131,7 @@ export default function Home() {
           <motion.div
             className="absolute z-0 right-[-5%] sm:right-[-10%]"
             style={{
-              top: "10%",
+              top: "0",
               transform: "translateY(-50%)",
             }}
             variants={geminiIconVariants}
@@ -141,7 +141,7 @@ export default function Home() {
             <img
               src="/images/gemini-icon.svg"
               alt="Gemini Logo"
-              className="w-24 sm:w-32 md:w-40 rotate-[30deg] object-contain object-center max-w-full h-auto"
+              className="w-24 sm:w-32 md:w-48 rotate-[30deg] object-contain object-center max-w-full h-auto"
             />
           </motion.div>
 
