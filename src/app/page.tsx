@@ -197,7 +197,7 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="min-h-screen lg:flex lg:flex-col lg:items-center lg:align-middle lg:justify-center"
+          className="min-h-screen lg:flex lg:flex-col lg:items-center lg:align-middle lg:justify-center lg:pt-16"
         >
           <Heading dark>Konuşmacılarımız Kimler?</Heading>
           <Speakers speakers={latestEventDetails.speakers} />

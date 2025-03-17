@@ -101,7 +101,7 @@ export default function ContactTabs() {
               </motion.div>
 
               {/* Right Column - Image with Border */}
-              <div className="flex items-center justify-center">
+              <div className="flex items-center justify-end">
                 <div className="relative">
                   {/* Gradient Border */}
                   <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-[#3682F1] to-[#C55E85] opacity-70"></div>
