@@ -24,6 +24,7 @@ const events: Event[] = [
         title: "DevRel Engineer",
         company: "Deepset",
         linkedin: "https://www.linkedin.com/in/bilge-yucel/",
+        twitter: "https://x.com/bilgeycl"
       },
       {
         fullName: "Fatih Kadir Akın",
@@ -43,6 +44,7 @@ const events: Event[] = [
         title: "Revenue Management R&D Specialist",
         company: "Turkish Airlines",
         linkedin: "https://www.linkedin.com/in/tolgakurtulus/",
+        twitter: "https://x.com/tolgaakurtuluss"
       },
       {
         fullName: "Göker Güner",
