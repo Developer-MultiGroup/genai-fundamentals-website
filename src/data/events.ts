@@ -18,12 +18,6 @@ const events: Event[] = [
         twitter: "https://x.com/meteatamel",
       },
       {
-        fullName: "Erhan Meydan",
-        title: "AI Researcher, Video Content Creator",
-        linkedin: "https://www.linkedin.com/in/erhanmeydan/",
-        twitter: "https://x.com/erhanmeydan",
-      },
-      {
         fullName: "Kardel Rüveyda Çetin ",
         title: "Software Development Lead",
         // phrase:
@@ -33,6 +27,19 @@ const events: Event[] = [
         twitter: "https://x.com/kardelanite",
       },
       {
+        fullName: "Fatih Kadir Akın",
+        title: "DevRel Manager",
+        company: "Teknasyon",
+        twitter: "https://x.com/fkadev",
+        linkedin: "https://www.linkedin.com/in/fatihkadirakin",
+      },
+      {
+        fullName: "Erhan Meydan",
+        title: "AI Researcher, Video Content Creator",
+        linkedin: "https://www.linkedin.com/in/erhanmeydan/",
+        twitter: "https://x.com/erhanmeydan",
+      },
+      {
         fullName: "Bilge Yücel ",
         title: "DevRel Engineer",
         company: "Deepset",
@@ -40,11 +47,11 @@ const events: Event[] = [
         twitter: "https://x.com/bilgeycl"
       },
       {
-        fullName: "Fatih Kadir Akın",
-        title: "DevRel Manager",
-        company: "Teknasyon",
-        twitter: "https://x.com/fkadev",
-        linkedin: "https://www.linkedin.com/in/fatihkadirakin",
+        fullName: "Emrah Mete",
+        title: "Senior Cloud Solution Architect - AI and Data Analytics",
+        company: "Microsoft",
+        linkedin: "https://www.linkedin.com/in/emrahmete/",
+        twitter: "https://x.com/emrahmete",
       },
       {
         fullName: "Şeyma Sarıgil",
@@ -65,13 +72,6 @@ const events: Event[] = [
         company: "Codeway",
         linkedin: "https://www.linkedin.com/in/gokerguner/",
         twitter: "https://x.com/gokerguner",
-      },
-      {
-        fullName: "Emrah Mete",
-        title: "Senior Cloud Solution Architect - AI and Data Analytics",
-        company: "Microsoft",
-        linkedin: "https://www.linkedin.com/in/emrahmete/",
-        twitter: "https://x.com/emrahmete",
       },
       {
         fullName: "Selin Çıldam",

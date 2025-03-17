@@ -202,6 +202,7 @@ export default function Home() {
           <Heading dark>Konuşmacılarımız Kimler?</Heading>
           <Speakers speakers={latestEventDetails.speakers} />
         </motion.div>
+        <StayInTouch />
 
         <span id="takvim" />
         <motion.div
@@ -216,7 +217,6 @@ export default function Home() {
           <SessionContainer event={latestEventDetails} />
         </motion.div>
 
-        <StayInTouch />
 
         <Sponsors sponsors={latestEventDetails.sponsors} />
       </div>
