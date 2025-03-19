@@ -24,11 +24,11 @@ const Speakers: React.FC<SpeakerCarouselProps> = ({ speakers }) => {
 
   return (
     <section className="max-w-6xl sm:w-5/6 mx-auto md:px-0 px-4">
-      <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4">
+      <div className="flex flex-wrap justify-center gap-4">
         {speakers.map((speaker) => (
           <div
             key={speaker.fullName}
-            className={`h-[250px] cursor-pointer group [perspective:1000px] ${
+            className={`h-[250px] w-full sm:w-[calc(50%-8px)] md:w-[calc(33.333%-11px)] lg:w-[calc(25%-12px)] xl:w-[calc(25%-12px)] cursor-pointer group [perspective:1000px] ${
               flippedCards[speaker.fullName] ? "flip-active" : ""
             }`}
             onClick={() => handleCardClick(speaker.fullName)}

@@ -54,6 +54,13 @@ const events: Event[] = [
         twitter: "https://x.com/emrahmete",
       },
       {
+        fullName: "Alican Kiraz",
+        title: "Head of Cyber Defense Center @Trendyol Group",
+        company: "Trendyol",
+        linkedin: "https://www.linkedin.com/in/alican-kiraz/",
+        twitter: "https://x.com/AlicanKiraz0",
+      },
+      {
         fullName: "Şeyma Sarıgil",
         title: "Senior Software Engineer",
         company: "Softtech",
@@ -218,6 +225,13 @@ const events: Event[] = [
         startTime: "20:30",
         endTime: "22:00",
         speakerName: "Selin Çıldam",
+      },
+      {
+        topic: "Hands-On LLM Fine-Tuning",
+        date: "2025-04-10",
+        startTime: "20:30",
+        endTime: "22:00",
+        speakerName: "Alican Kiraz",
       },
       {
         topic: "Fine Tuning with Google AI Studio",
