@@ -256,6 +256,10 @@ const events: Event[] = [
       },
       {
         tier: "",
+        sponsorSlug: "trendyol",
+      },
+      {
+        tier: "",
         sponsorSlug: "dogus-teknoloji",
       },
       {
