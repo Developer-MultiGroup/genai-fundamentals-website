@@ -191,78 +191,48 @@ export default function ResourcePage() {
               />
             </motion.div>
 
-            <motion.div
-              className="relative w-full md:max-w-[180px] flex-1"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-            >
-              <select
-                value={selectedTag}
-                onChange={(e) => setSelectedTag(e.target.value)}
-                className="w-full pl-3 pr-10 py-2 bg-gray-800/70 border border-gray-600/30 text-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#C55E85]"
+            <div className="flex flex-col sm:flex-row w-full md:w-auto gap-2">
+              <motion.div
+                className="relative w-full sm:w-1/2 md:w-[180px]"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
               >
-                <option value="all">Tümü</option>
-                {uniqueTags.map((tag, index) => (
-                  <option key={index} value={tag}>
-                    {tag}
-                  </option>
-                ))}
-              </select>
-            </motion.div>
-          </div>
-
-          {/* Lesson Selector */}
-          <motion.div
-            className="w-full flex flex-wrap justify-center gap-2 mb-8"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.55 }}
-          >
-            <div className="flex flex-wrap gap-2 justify-center">
-              <label className="inline-flex items-center">
-                <input
-                  type="radio"
-                  name="lesson"
-                  value="all"
-                  checked={selectedLesson === "all"}
-                  onChange={() => setSelectedLesson("all")}
-                  className="sr-only"
-                />
-                <span
-                  className={`px-3 py-1 rounded-full text-xs cursor-pointer transition-colors ${
-                    selectedLesson === "all"
-                      ? "bg-[#C55E85] text-white"
-                      : "bg-gray-700 text-gray-300 hover:bg-gray-600"
-                  }`}
+                <select
+                  value={selectedTag}
+                  onChange={(e) => setSelectedTag(e.target.value)}
+                  className="w-full pl-3 pr-10 py-2 bg-gray-800/70 border border-gray-600/30 text-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#C55E85]"
                 >
-                  Tümü
-                </span>
-              </label>
+                  <option value="all">Tüm Etiketler</option>
+                  {uniqueTags.map((tag, index) => (
+                    <option key={index} value={tag}>
+                      {tag}
+                    </option>
+                  ))}
+                </select>
+              </motion.div>
 
-              {uniqueLessons.map((lesson, index) => (
-                <label key={index} className="inline-flex items-center">
-                  <input
-                    type="radio"
-                    name="lesson"
-                    value={lesson}
-                    checked={selectedLesson === lesson}
-                    onChange={() => setSelectedLesson(lesson)}
-                    className="sr-only"
-                  />
-                  <span
-                    className={`px-3 py-1 rounded-full text-xs cursor-pointer transition-colors ${
-                      selectedLesson === lesson
-                        ? "bg-[#C55E85] text-white"
-                        : "bg-gray-700 text-gray-300 hover:bg-gray-600"
-                    }`}
-                  >
-                    {lesson}
-                  </span>
-                </label>
-              ))}
+              <motion.div
+                className="relative w-full sm:w-1/2 md:w-[120px]"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.55 }}
+              >
+                <select
+                  value={selectedLesson}
+                  onChange={(e) => setSelectedLesson(e.target.value)}
+                  className="w-full pl-3 pr-10 py-2 bg-[#C55E85]/70 border border-gray-600/30 text-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#C55E85]"
+                >
+                  <option value="all">Dersler</option>
+                  {uniqueLessons.map((lesson, index) => (
+                    <option key={index} value={lesson}>
+                      {lesson}
+                    </option>
+                  ))}
+                </select>
+              </motion.div>
             </div>
-          </motion.div>
+          </div>
 
           {/* GitHub linkine yönlendiren + butonu */}
           <motion.div
