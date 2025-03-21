@@ -13,10 +13,7 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import {
-  ResourceProvider,
-  useResourceContext,
-} from "@/context/ResourceContext";
+import { useResourceContext } from "@/context/ResourceContext";
 
 // Breakpoint object for masonry grid
 const breakpointColumnsObj = {
@@ -29,6 +26,7 @@ export default function ResourcePage() {
   const { resources, isLoading, isError } = useResourceContext();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedTag, setSelectedTag] = useState("all");
+  const [selectedLesson, setSelectedLesson] = useState("all");
   const [visibleItems, setVisibleItems] = useState(6);
 
   // Tüm etiketleri toplayıp benzersiz hale getiriyoruz
@@ -44,7 +42,18 @@ export default function ResourcePage() {
     return Array.from(tagsSet);
   }, [resources]);
 
-  // Filter resources based on search query and optionally on selected tag
+  // Extract unique lessons
+  const uniqueLessons: string[] = useMemo(() => {
+    const lessonsSet = new Set<string>();
+    resources?.forEach((resource) => {
+      if (resource.lesson) {
+        lessonsSet.add(resource.lesson.trim());
+      }
+    });
+    return Array.from(lessonsSet);
+  }, [resources]);
+
+  // Filter resources based on search query, selected tag, and selected lesson
   const filteredResources = resources?.filter((resource) => {
     const matchesSearch = resource.name
       .toLowerCase()
@@ -57,7 +66,10 @@ export default function ResourcePage() {
           .split(",")
           .map((tag) => tag.trim())
           .includes(selectedTag.toLowerCase()));
-    return matchesSearch && matchesTag;
+    const matchesLesson =
+      selectedLesson === "all" ||
+      (resource.lesson && resource.lesson.trim() === selectedLesson);
+    return matchesSearch && matchesTag && matchesLesson;
   });
 
   const visibleResources = filteredResources?.slice(0, visibleItems);
@@ -70,10 +82,10 @@ export default function ResourcePage() {
     setVisibleItems((prev) => prev + 6);
   };
 
-  // Reset visible items when search query or tag changes
+  // Reset visible items when search query, tag, or lesson changes
   useEffect(() => {
     setVisibleItems(6);
-  }, [searchQuery, selectedTag]);
+  }, [searchQuery, selectedTag, selectedLesson]);
 
   // Animation variants
   const containerVariants = {
@@ -190,7 +202,7 @@ export default function ResourcePage() {
                 onChange={(e) => setSelectedTag(e.target.value)}
                 className="w-full pl-3 pr-10 py-2 bg-gray-800/70 border border-gray-600/30 text-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#C55E85]"
               >
-                <option value="all">Tüm Etiketler</option>
+                <option value="all">Tümü</option>
                 {uniqueTags.map((tag, index) => (
                   <option key={index} value={tag}>
                     {tag}
@@ -199,6 +211,58 @@ export default function ResourcePage() {
               </select>
             </motion.div>
           </div>
+
+          {/* Lesson Selector */}
+          <motion.div
+            className="w-full flex flex-wrap justify-center gap-2 mb-8"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.55 }}
+          >
+            <div className="flex flex-wrap gap-2 justify-center">
+              <label className="inline-flex items-center">
+                <input
+                  type="radio"
+                  name="lesson"
+                  value="all"
+                  checked={selectedLesson === "all"}
+                  onChange={() => setSelectedLesson("all")}
+                  className="sr-only"
+                />
+                <span
+                  className={`px-3 py-1 rounded-full text-xs cursor-pointer transition-colors ${
+                    selectedLesson === "all"
+                      ? "bg-[#C55E85] text-white"
+                      : "bg-gray-700 text-gray-300 hover:bg-gray-600"
+                  }`}
+                >
+                  Tümü
+                </span>
+              </label>
+
+              {uniqueLessons.map((lesson, index) => (
+                <label key={index} className="inline-flex items-center">
+                  <input
+                    type="radio"
+                    name="lesson"
+                    value={lesson}
+                    checked={selectedLesson === lesson}
+                    onChange={() => setSelectedLesson(lesson)}
+                    className="sr-only"
+                  />
+                  <span
+                    className={`px-3 py-1 rounded-full text-xs cursor-pointer transition-colors ${
+                      selectedLesson === lesson
+                        ? "bg-[#C55E85] text-white"
+                        : "bg-gray-700 text-gray-300 hover:bg-gray-600"
+                    }`}
+                  >
+                    {lesson}
+                  </span>
+                </label>
+              ))}
+            </div>
+          </motion.div>
 
           {/* GitHub linkine yönlendiren + butonu */}
           <motion.div
@@ -371,4 +435,4 @@ export default function ResourcePage() {
       </motion.div>
     </div>
   );
-};
+}

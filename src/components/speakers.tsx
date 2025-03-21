@@ -23,12 +23,12 @@ const Speakers: React.FC<SpeakerCarouselProps> = ({ speakers }) => {
   };
 
   return (
-    <section className="max-w-6xl sm:w-5/6 mx-auto md:px-0 px-4">
+    <section className="max-w-7xl sm:w-5/6 mx-auto md:px-0 px-4">
       <div className="flex flex-wrap justify-center gap-4">
         {speakers.map((speaker) => (
           <div
             key={speaker.fullName}
-            className={`h-[250px] w-full sm:w-[calc(50%-8px)] md:w-[calc(33.333%-11px)] lg:w-[calc(25%-12px)] xl:w-[calc(25%-12px)] cursor-pointer group [perspective:1000px] ${
+            className={`h-[250px] w-full sm:w-[calc(50%-8px)] md:w-[calc(33.333%-11px)] lg:w-[calc(25%-12px)] xl:w-[calc(20%-13px)] cursor-pointer group [perspective:1000px] ${
               flippedCards[speaker.fullName] ? "flip-active" : ""
             }`}
             onClick={() => handleCardClick(speaker.fullName)}
@@ -65,6 +65,23 @@ const Speakers: React.FC<SpeakerCarouselProps> = ({ speakers }) => {
                     {speaker.title}
                   </p>
                 </div>
+
+                {speaker.company && (
+                  <div className="flex justify-center w-full h-16">
+                    <div className="relative w-24 h-16">
+                      <Image
+                        src={`/images/sponsors/${slugify(
+                          speaker.company
+                        )}.webp`}
+                        alt={`${speaker.company} logo`}
+                        className="object-contain"
+                        fill
+                        sizes="96px"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                )}
 
                 <div className="flex justify-center space-x-3 mb-2">
                   {speaker.instagram && (
@@ -104,23 +121,6 @@ const Speakers: React.FC<SpeakerCarouselProps> = ({ speakers }) => {
                     </a>
                   )}
                 </div>
-
-                {speaker.company && (
-                  <div className="flex justify-center w-full h-16">
-                    <div className="relative w-24 h-16">
-                      <Image
-                        src={`/images/sponsors/${slugify(
-                          speaker.company
-                        )}.webp`}
-                        alt={`${speaker.company} logo`}
-                        className="object-contain"
-                        fill
-                        sizes="96px"
-                        loading="lazy"
-                      />
-                    </div>
-                  </div>
-                )}
               </Card>
             </div>
           </div>

@@ -121,9 +121,9 @@ export default function Home() {
             </span>
             <span>
               <span className="text-[#3682F1]">
-                <Counter target={10} />
+                <Counter target={100} />
               </span>{" "}
-              Konuşmacı
+              Kaynak
             </span>
           </div>
 
@@ -231,7 +231,7 @@ export default function Home() {
         transition={{ duration: 0.6 }}
         className="max-w-6xl mx-auto px-4 pt-12 pb-16"
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center pt-24">
           <p className="font-extrabold text-4xl text-center text-white">
             Sıkça Sorulan{" "}
             <span className="bg-gradient-to-r from-[#3682F1] to-[#C55E85] bg-clip-text text-transparent">
