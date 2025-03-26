@@ -2,6 +2,9 @@
 import { google } from 'googleapis';
 import { NextResponse } from 'next/server';
 
+// Revalidate değeri - 60 dakika (3600 saniye)
+export const revalidate = 3600;
+
 async function getGoogleSheetsClient() {
   const credentials = {
     client_email: process.env.GOOGLE_CLIENT_EMAIL,
@@ -39,18 +42,29 @@ export async function GET() {
       }))
       .filter((resource) => resource.name && resource.link && resource.description);
 
-    // Return a JSON response and set caching headers.
-    return NextResponse.json(resources, {
+    // Zaman damgası
+    const timestamp = new Date().toLocaleTimeString('tr-TR');
+    
+
+    // Return a JSON response and set caching headers for both CDN and client.
+    return NextResponse.json({
+      resources, 
+      _metadata: {
+        lastUpdated: timestamp,
+        revalidationPeriod: '60 dakika'
+      }
+    }, {
       headers: {
-        'Cache-Control': 's-maxage=3600, stale-while-revalidate',
+        // 60 dakika boyunca önbellekte tutulacak ve arka planda yenilenecek
+        'Cache-Control': 's-maxage=3600, stale-while-revalidate=3599',
       },
     });
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error('Sheets API Error:', error);
 
     const message =
       process.env.NODE_ENV === 'development'
-        ? error.message
+        ? error instanceof Error ? error.message : 'Unknown error'
         : 'Internal Server Error';
 
     return NextResponse.json(
