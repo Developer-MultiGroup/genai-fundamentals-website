@@ -37,12 +37,18 @@ const Sponsors = ({ sponsors }: { sponsors: Sponsor[] }) => {
   };
 
   return (
-    <div className="container mx-auto px-4 min-h-screen flex items-center">
+    <div className="container mx-auto px-4 min-h-[50vh] flex items-end justify-end align-bottom mt-12">
       {sortedTiers.map((tier) => (
         <div key={tier} className="mb-16">
-          <Heading dark>{formatTierTitle(tier)}</Heading>
+          <motion.h1
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            className="text-2xl text-center font-bold font-sans"
+          >
+            {formatTierTitle(tier)}
+          </motion.h1>
 
-          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-16 pt-12">
+          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-y-8 gap-x-12 pt-12 w-1/2 m-auto">
             {sponsorsByTier[tier].map((sponsor) => (
               <motion.div
                 key={sponsor.sponsorSlug}
@@ -51,7 +57,7 @@ const Sponsors = ({ sponsors }: { sponsors: Sponsor[] }) => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.4 }}
                 whileHover={{ scale: 1.05 }}
-                className="w-[200px] h-[100px] flex items-center justify-center"
+                className="w-[150px] h-[75px] flex items-center justify-center"
               >
                 <div className="relative w-full h-full">
                   <Image
@@ -59,7 +65,7 @@ const Sponsors = ({ sponsors }: { sponsors: Sponsor[] }) => {
                     alt={sponsor.sponsorSlug || `${tier} Sponsor`}
                     className="opacity-80 hover:opacity-100 transition-opacity object-contain"
                     fill={true}
-                    sizes="200px"
+                    sizes="150px"
                   />
                 </div>
               </motion.div>

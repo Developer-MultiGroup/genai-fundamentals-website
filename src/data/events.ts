@@ -197,6 +197,7 @@ const events: Event[] = [
         startTime: "20:30",
         endTime: "22:00",
         speakerName: "Şeyma Sarıgil",
+        url: "https://www.youtube.com/watch?v=XG2REgrI_BQ&list=PLQvJkakaBRKcEf3tq169jkNvoyiQN2XzN&index=13&pp=iAQB"
       },
       {
         topic: "AI Agents Unmasked: Agents Nedir Kimdir?",
@@ -204,6 +205,7 @@ const events: Event[] = [
         startTime: "20:30",
         endTime: "22:00",
         speakerName: "Erhan Meydan",
+        url: "https://www.youtube.com/watch?v=ZZCbOQTUvss&list=PLQvJkakaBRKcEf3tq169jkNvoyiQN2XzN&index=14&pp=iAQB"
       },
       {
         topic: "Comparing Agent Frameworks & Different agent notebook example",
@@ -211,6 +213,7 @@ const events: Event[] = [
         startTime: "20:30",
         endTime: "22:00",
         speakerName: "Şeyma Sarıgil",
+        url: "https://www.youtube.com/watch?v=n_fBDE1jKfk&list=PLQvJkakaBRKcEf3tq169jkNvoyiQN2XzN&index=15&pp=iAQB"
       },
       {
         topic: "Beyond the Prompt: Evaluating, Testing, and Securing LLM Applications",
