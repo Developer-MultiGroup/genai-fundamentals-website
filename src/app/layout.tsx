@@ -15,7 +15,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Developer MultiGroup",
+  title: "Generative AI Fundamentals | MultiGroup",
   description:
     "Generative AI Fundamentals with Gemini Bootcamp Sayfası! Sen de AI hakkında daha fazla bilgiye erişmek istiyorsan seni sitemize alalım.",
   robots: {

@@ -53,13 +53,13 @@ const events: Event[] = [
         linkedin: "https://www.linkedin.com/in/emrahmete/",
         twitter: "https://x.com/emrahmete",
       },
-      {
-        fullName: "Alican Kiraz",
-        title: "Head of Cyber Defense Center @Trendyol Group",
-        company: "Trendyol",
-        linkedin: "https://www.linkedin.com/in/alican-kiraz/",
-        twitter: "https://x.com/AlicanKiraz0",
-      },
+      // {
+      //   fullName: "Alican Kiraz",
+      //   title: "Head of Cyber Defense Center @Trendyol Group",
+      //   company: "Trendyol",
+      //   linkedin: "https://www.linkedin.com/in/alican-kiraz/",
+      //   twitter: "https://x.com/AlicanKiraz0",
+      // },
       {
         fullName: "Şeyma Sarıgil",
         title: "Senior Software Engineer",
@@ -191,30 +191,7 @@ const events: Event[] = [
         speakerName: "Bilge Yücel",
         url: "https://www.youtube.com/watch?v=fXkeYK-hL6c&list=PLQvJkakaBRKcEf3tq169jkNvoyiQN2XzN&index=12&pp=iAQB"
       },
-      {
-        topic: "What is an agent? LLM agent examples",
-        date: "2025-04-02",
-        startTime: "20:30",
-        endTime: "22:00",
-        speakerName: "Şeyma Sarıgil",
-        url: "https://www.youtube.com/watch?v=XG2REgrI_BQ&list=PLQvJkakaBRKcEf3tq169jkNvoyiQN2XzN&index=13&pp=iAQB"
-      },
-      {
-        topic: "AI Agents Unmasked: Agents Nedir Kimdir?",
-        date: "2025-04-04",
-        startTime: "20:30",
-        endTime: "22:00",
-        speakerName: "Erhan Meydan",
-        url: "https://www.youtube.com/watch?v=ZZCbOQTUvss&list=PLQvJkakaBRKcEf3tq169jkNvoyiQN2XzN&index=14&pp=iAQB"
-      },
-      {
-        topic: "Comparing Agent Frameworks & Different agent notebook example",
-        date: "2025-04-05",
-        startTime: "20:30",
-        endTime: "22:00",
-        speakerName: "Şeyma Sarıgil",
-        url: "https://www.youtube.com/watch?v=n_fBDE1jKfk&list=PLQvJkakaBRKcEf3tq169jkNvoyiQN2XzN&index=15&pp=iAQB"
-      },
+
       {
         topic: "Beyond the Prompt: Evaluating, Testing, and Securing LLM Applications",
         date: "2025-04-07",
@@ -223,26 +200,51 @@ const events: Event[] = [
         speakerName: "Mete Atamel",
       },
       {
-        topic: "What is Fine Tuning",
+        topic: "What is an agent? LLM agent examples",
         date: "2025-04-09",
         startTime: "20:30",
         endTime: "22:00",
+        speakerName: "Şeyma Sarıgil",
+        url: "https://www.youtube.com/watch?v=XG2REgrI_BQ&list=PLQvJkakaBRKcEf3tq169jkNvoyiQN2XzN&index=13&pp=iAQB"
+      },
+      {
+        topic: "Comparing Agent Frameworks & Different agent notebook example",
+        date: "2025-04-14",
+        startTime: "20:30",
+        endTime: "22:00",
+        speakerName: "Şeyma Sarıgil",
+        url: "https://www.youtube.com/watch?v=n_fBDE1jKfk&list=PLQvJkakaBRKcEf3tq169jkNvoyiQN2XzN&index=15&pp=iAQB"
+      },
+      {
+        topic: "What is Fine Tuning",
+        date: "2025-04-16",
+        startTime: "20:30",
+        endTime: "22:00",
         speakerName: "Selin Çıldam",
       },
       {
-        topic: "Hands-On LLM Fine-Tuning",
-        date: "2025-04-10",
+        topic: "AI Agents Unmasked: Agents Nedir Kimdir?",
+        date: "2025-04-18",
         startTime: "20:30",
         endTime: "22:00",
-        speakerName: "Alican Kiraz",
+        speakerName: "Erhan Meydan",
+        url: "https://www.youtube.com/watch?v=ZZCbOQTUvss&list=PLQvJkakaBRKcEf3tq169jkNvoyiQN2XzN&index=14&pp=iAQB"
       },
-      {
-        topic: "Fine Tuning with Google AI Studio",
-        date: "2025-04-12",
-        startTime: "20:30",
-        endTime: "22:00",
-        speakerName: "Selin Çıldam",
-      },
+      
+      // {
+      //   topic: "Hands-On LLM Fine-Tuning",
+      //   date: "2025-04-10",
+      //   startTime: "20:30",
+      //   endTime: "22:00",
+      //   speakerName: "Alican Kiraz",
+      // },
+      // {
+      //   topic: "Fine Tuning with Google AI Studio",
+      //   date: "2025-04-12",
+      //   startTime: "20:30",
+      //   endTime: "22:00",
+      //   speakerName: "Selin Çıldam",
+      // },
     ],
     sponsors: [
       {
@@ -257,10 +259,10 @@ const events: Event[] = [
         tier: "",
         sponsorSlug: "turkish-airlines",
       },
-      {
-        tier: "",
-        sponsorSlug: "trendyol",
-      },
+      // {
+      //   tier: "",
+      //   sponsorSlug: "trendyol",
+      // },
       {
         tier: "",
         sponsorSlug: "dogus-teknoloji",

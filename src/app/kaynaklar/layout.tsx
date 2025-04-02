@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 
 export const metadata = {
-  title: "GenAI Kaynaklar | DMG",
+  title: "Kaynaklar | Genarative AI Fundamentals",
   description: "Bootcamp'imizde kullanılan ve işinize yarayacağını düşündüğümüz kaynakları bir araya toplandık. Sen de GenAI için kaynak arayışındaysan seni buraya alalım!"
 };
 
