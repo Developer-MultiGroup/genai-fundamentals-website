@@ -200,14 +200,6 @@ const events: Event[] = [
         speakerName: "Mete Atamel",
       },
       {
-        topic: "What is an agent? LLM agent examples",
-        date: "2025-04-09",
-        startTime: "20:30",
-        endTime: "22:00",
-        speakerName: "Şeyma Sarıgil",
-        url: "https://www.youtube.com/watch?v=XG2REgrI_BQ&list=PLQvJkakaBRKcEf3tq169jkNvoyiQN2XzN&index=13&pp=iAQB"
-      },
-      {
         topic: "Comparing Agent Frameworks & Different agent notebook example",
         date: "2025-04-14",
         startTime: "20:30",
