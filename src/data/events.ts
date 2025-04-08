@@ -200,7 +200,7 @@ const events: Event[] = [
         speakerName: "Mete Atamel",
       },
       {
-        topic: "Comparing Agent Frameworks & Different agent notebook example",
+        topic: "What is an agent? LLM Agent Examples",
         date: "2025-04-14",
         startTime: "20:30",
         endTime: "22:00",
