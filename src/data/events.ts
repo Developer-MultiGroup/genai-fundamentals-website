@@ -101,7 +101,7 @@ const events: Event[] = [
         startTime: "20:30",
         endTime: "22:00",
         speakerName: "Serkan Alc",
-        url: "https://www.youtube.com/watch?v=B-tTRvuMvH8&list=PLQvJkakaBRKcEf3tq169jkNvoyiQN2XzN&index=6&pp=iAQB"
+        url: "https://www.youtube.com/watch?v=l5L4D3K4LgA"
       },
       {
         topic: "What Are the Basic GenAI Consepts?",
@@ -198,6 +198,7 @@ const events: Event[] = [
         startTime: "20:30",
         endTime: "22:00",
         speakerName: "Mete Atamel",
+        url: "https://www.youtube.com/watch?v=CgMdeW0DzEI"
       },
       {
         topic: "What is an agent? LLM Agent Examples",
@@ -205,7 +206,7 @@ const events: Event[] = [
         startTime: "20:30",
         endTime: "22:00",
         speakerName: "Şeyma Sarıgil",
-        url: "https://www.youtube.com/watch?v=n_fBDE1jKfk&list=PLQvJkakaBRKcEf3tq169jkNvoyiQN2XzN&index=15&pp=iAQB"
+        url: "https://www.youtube.com/watch?v=I3WF5SJ82z4"
       },
       {
         topic: "What is Fine Tuning",
@@ -220,7 +221,6 @@ const events: Event[] = [
         startTime: "20:30",
         endTime: "22:00",
         speakerName: "Erhan Meydan",
-        url: "https://www.youtube.com/watch?v=ZZCbOQTUvss&list=PLQvJkakaBRKcEf3tq169jkNvoyiQN2XzN&index=14&pp=iAQB"
       },
       
       // {
