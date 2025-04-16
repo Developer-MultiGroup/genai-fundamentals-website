@@ -56,6 +56,7 @@ export function getClosestSession(event: Event): string {
 
   // Find the session with the closest date to now (among future sessions)
   let closestSession = futureSessions[0];
+
   let closestDiff = new Date(closestSession.dateTime).getTime() - now.getTime();
 
   for (let i = 1; i < futureSessions.length; i++) {
@@ -79,6 +80,9 @@ export function getClosestSession(event: Event): string {
  * @returns Combined date and time in ISO format with GMT+3 timezone
  */
 function combineDateTime(dateStr: string, timeStr: string): string {
+  if (!dateStr || dateStr.trim() === "") {
+    return "";
+  }
   // Parse the date and time
   const [year, month, day] = dateStr.split("-").map(Number);
   const [hours, minutes] = timeStr.split(":").map(Number);
@@ -114,7 +118,7 @@ function getCurrentTimeInGMT3(): Date {
   const gmt3Offset = -180;
 
   // Calculate the difference in minutes
-  const diffMinutes = localOffset + gmt3Offset;
+  const diffMinutes = gmt3Offset - localOffset;
 
   // Adjust the time
   return new Date(now.getTime() + diffMinutes * 60 * 1000);

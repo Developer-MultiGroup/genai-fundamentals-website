@@ -38,6 +38,9 @@ export default function SessionContainer({ event }: SessionContainerProps) {
 
     // Filter out sessions that occurred before today
     const upcomingSessions = sessions.filter((session) => {
+      if (!session.date || session.date.trim() === "") {
+        return false;
+      }
       // Parse date and time fields to create a proper date object
       const [year, month, day] = session.date.split("-").map(Number);
       const [hours, minutes] = session.startTime.split(":").map(Number);

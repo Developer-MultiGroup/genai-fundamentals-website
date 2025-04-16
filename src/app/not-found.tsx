@@ -4,8 +4,13 @@ import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import CountdownTimer from "@/components/countdown-timer";
-import { getLatestEvent, getClosestSession } from "@/lib/event-utils";
+import {
+  getLatestEvent,
+  getClosestSession,
+  getClosestUpcomingSession,
+} from "@/lib/event-utils";
 import { Sparkles, Ghost, Home, Coffee } from "lucide-react";
+import events from "@/data/events";
 
 export default function NotFound() {
   const router = useRouter();
@@ -41,14 +46,10 @@ export default function NotFound() {
     }
   };
 
-  const closestSessionDate = getClosestSession(latestEventDetails);
-  console.log(closestSessionDate);
-  
+  const closestSessionDate = getClosestUpcomingSession(events);
 
   return (
-    <div
-      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-blue-950 to-black"
-    >
+    <div className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-blue-950 to-black">
       {/* Animated stars background */}
       {stars.map((star) => (
         <div
@@ -102,13 +103,15 @@ export default function NotFound() {
         Öyle bir yayın olsa da izlesek!
       </p>
 
-      <div className="mt-6 md:mt-8 text-white bg-black/20 p-4 md:p-6 rounded-xl backdrop-blur-sm mx-4 w-[90%] max-w-md">
-        <p className="text-center mb-2 text-blue-400 font-semibold text-sm md:text-base">
-          Bir sonraki yayına kalan süre:
-        </p>
+      {closestSessionDate && (
+        <div className="mt-6 md:mt-8 text-white bg-black/20 p-4 md:p-6 rounded-xl backdrop-blur-sm mx-4 w-[90%] max-w-md">
+          <p className="text-center mb-2 text-blue-400 font-semibold text-sm md:text-base">
+            Bir sonraki yayına kalan süre:
+          </p>
 
-        <CountdownTimer center targetDate={closestSessionDate} />
-      </div>
+          <CountdownTimer center targetDate={closestSessionDate} />
+        </div>
+      )}
 
       <Button
         onClick={handleRoute}
