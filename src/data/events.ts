@@ -201,19 +201,12 @@ const events: Event[] = [
         url: "https://www.youtube.com/watch?v=CgMdeW0DzEI"
       },
       {
-        topic: "What is an agent? LLM Agent Examples",
-        date: "2025-04-14",
-        startTime: "20:30",
-        endTime: "22:00",
-        speakerName: "Şeyma Sarıgil",
-        url: "https://www.youtube.com/watch?v=I3WF5SJ82z4"
-      },
-      {
         topic: "What is Fine Tuning",
         date: "2025-04-16",
         startTime: "20:30",
         endTime: "22:00",
         speakerName: "Selin Çıldam",
+        url: "https://www.youtube.com/watch?v=rc00veUeSrA"
       },
       {
         topic: "AI Agents Unmasked: Agents Nedir Kimdir?",
@@ -221,6 +214,13 @@ const events: Event[] = [
         startTime: "20:30",
         endTime: "22:00",
         speakerName: "Erhan Meydan",
+      },
+      {
+        topic: "What is an agent? LLM Agent Examples",
+        date: "",
+        startTime: "20:30",
+        endTime: "22:00",
+        speakerName: "Şeyma Sarıgil",
       },
       
       // {

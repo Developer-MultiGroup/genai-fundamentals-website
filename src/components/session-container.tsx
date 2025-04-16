@@ -267,8 +267,11 @@ export default function SessionContainer({ event }: SessionContainerProps) {
                     <div className="flex-1">
                       <div className="flex items-center">
                         <p className="text-sm font-medium text-gray-500">
-                          {formatIsoDate(session.date)} {session.startTime} -{" "}
-                          {session.endTime}
+                          {session.date != ""
+                            ? `${formatIsoDate(session.date)} ${
+                                session.startTime
+                              } - ${session.endTime}`
+                            : "Tarih Belirlenecek"}
                         </p>
                       </div>
                       <p className="text-xl font-bold text-gray-900 mt-1">
