@@ -214,6 +214,7 @@ const events: Event[] = [
         startTime: "20:30",
         endTime: "22:00",
         speakerName: "Erhan Meydan",
+        url: "https://www.youtube.com/watch?v=Mgh_h8hRrcc"
       },
       {
         topic: "What is an agent? LLM Agent Examples",
