@@ -218,8 +218,8 @@ const events: Event[] = [
       },
       {
         topic: "What is an agent? LLM Agent Examples",
-        date: "",
-        startTime: "20:30",
+        date: "2025-04-21",
+        startTime: "21:00",
         endTime: "22:00",
         speakerName: "Şeyma Sarıgil",
       },
