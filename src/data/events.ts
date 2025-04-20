@@ -222,6 +222,7 @@ const events: Event[] = [
         startTime: "21:00",
         endTime: "22:00",
         speakerName: "Şeyma Sarıgil",
+        url: "https://www.youtube.com/watch?v=EZoIfT__Ypk"
       },
       
       // {
